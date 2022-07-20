@@ -1,0 +1,29 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites": {
+            "value": [
+                {
+                    "name": "contoso",
+                    "location": "westeurope",
+                    "region": "weu",
+                    "environment": "dev",
+                    "networkAddressPrefix": "172.16.0.0/16",
+                    "subscriptionId": "op://Microsoft/Azure/Primary"
+                },
+                {
+                    "name": "fabrikam",
+                    "location": "westeurope",
+                    "region": "weu",
+                    "environment": "dev",
+                    "networkAddressPrefix": "172.24.0.0/16",
+                    "subscriptionId": "op://Microsoft/Azure/Secondary"
+                }
+            ]
+        },
+        "jumphostSshKeyData": {
+            "value": "op://Microsoft/Azure/PublicSshKey"
+        }
+    }
+}
